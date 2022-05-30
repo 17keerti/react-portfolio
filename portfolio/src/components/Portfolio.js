@@ -108,20 +108,42 @@ function Portfolio() {
         </div>
         <div className="uk-card uk-card-default">
           <div className="uk-card-media-top">
-            <img src="password.png" width="250" height="250" alt=""></img>{" "}
+            <img src="techblog.png" width="250" height="250" alt=""></img>{" "}
           </div>
           <div className="uk-card-body">
-            <a href="https://17keerti.github.io/password-generator-29thmarch/">
-              <h3 className="uk-card-title">Password Generator</h3>
+            <a href="https://sleepy-dawn-07752.herokuapp.com/">
+              <h3 className="uk-card-title">Tech Blog </h3>
             </a>
-            <a href="https://github.com/17keerti/password-generator-29thmarch">
+            <a href="https://github.com/17keerti/tech-blog">
               <span uk-icon="github"></span>
             </a>
             <p>
-              This generates a random password based on user-selected criteria.
-              It gives several prompts to users to select options. Once all
-              prompts are answered, the user will be given a password of their
-              choice.
+              This project uses the Model-View-Controller (MVC) paradigm to
+              create a blog-style website where developers can create their
+              account, and after logging in they can make posts, edit posts, and
+              comment on other user's posts.
+            </p>
+          </div>
+        </div>
+
+        <div className="uk-card uk-card-default">
+          <div className="uk-card-media-top">
+            <img src="texteditor.png" width="250" height="250" alt=""></img>{" "}
+          </div>
+          <div className="uk-card-body">
+            <a href="https://keerti-texteditor.herokuapp.com/">
+              <h3 className="uk-card-title">Text Editor</h3>
+            </a>
+            <a href="https://github.com/17keerti/text-editor">
+              <span uk-icon="github"></span>
+            </a>
+            <p>
+              This is a simple text editor app that can function both online and
+              offline. It is a single-page application that meets the PWA
+              criteria. Additionally, it features a number of data persistence
+              techniques that serve as redundancy in case one of the options is
+              not supported by the browser. The application will also function
+              offline.
             </p>
           </div>
         </div>

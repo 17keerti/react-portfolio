@@ -4,6 +4,7 @@ const styles = {
   navbar: {
     display: "flex",
     justifyContent: "flex-end",
+    background: "#D3F4FB",
   },
 };
 

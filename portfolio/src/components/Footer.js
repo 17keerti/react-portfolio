@@ -4,6 +4,7 @@ const styles = {
   footer: {
     display: "flex",
     justifyContent: "center",
+    background: "#D3F4FB",
   },
 };
 
