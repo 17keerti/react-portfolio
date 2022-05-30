@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import AboutMe from "./AboutMe";
 import Resume from "./Resume";
 import Portfolio from "./Portfolio";
+import Contact from "./Contact";
 
 function Header() {
   const [currentPage, setCurrentPage] = useState("AboutMe");
@@ -16,6 +17,9 @@ function Header() {
     }
     if (currentPage === "Portfolio") {
       return <Portfolio />;
+    }
+    if (currentPage === "Contact") {
+      return <Contact />;
     }
   };
 

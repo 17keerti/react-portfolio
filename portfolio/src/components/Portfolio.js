@@ -3,15 +3,15 @@ import React from "react";
 function Portfolio() {
   return (
     <div>
-      <div class="uk-text uk-padding-small">
+      <div className="uk-text uk-padding-small">
         <h2 id="portfolio">Projects</h2>
       </div>
       <div
-        class="uk-child-width-expand@s uk-text-center uk-height-match uk-margin-small-left"
+        className="uk-child-width-expand@s uk-text-center uk-height-match uk-margin-small-left"
         uk-grid
       >
-        <div class="uk-card uk-card-default">
-          <div class="uk-card-media-top">
+        <div className="uk-card uk-card-default">
+          <div className="uk-card-media-top">
             <img
               src="get-unbored-overview.gif"
               width="250"
@@ -19,12 +19,12 @@ function Portfolio() {
               alt=""
             ></img>
           </div>
-          <div class="uk-card-body">
+          <div className="uk-card-body">
             <a href="https://17keerti.github.io/get-unbored/">
-              <h3 class="uk-card-title">Get Unbored</h3>
+              <h3 className="uk-card-title">Get Unbored</h3>
             </a>
             <a
-              class="uk-text-center"
+              className="uk-text-center"
               href="https://github.com/17keerti/get-unbored"
             >
               <span uk-icon="github"></span>
@@ -38,7 +38,7 @@ function Portfolio() {
             </p>
           </div>
 
-          <div class="uk-card-media-top">
+          <div className="uk-card-media-top">
             <img
               src="work-day-scheduler.png"
               width="250"
@@ -46,9 +46,9 @@ function Portfolio() {
               alt=""
             ></img>
           </div>
-          <div class="uk-card-body">
+          <div className="uk-card-body">
             <a href="https://17keerti.github.io/Work-Day-Scheduler/">
-              <h3 class="uk-card-title">Work Day Scheduler</h3>
+              <h3 className="uk-card-title">Work Day Scheduler</h3>
             </a>
             <a href="https://github.com/17keerti/Work-Day-Scheduler">
               <span uk-icon="github"></span>
@@ -60,8 +60,8 @@ function Portfolio() {
             </p>
           </div>
 
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
+          <div className="uk-card uk-card-default">
+            <div className="uk-card-media-top">
               <img
                 src="weather-dashboard.png"
                 width="250"
@@ -69,9 +69,9 @@ function Portfolio() {
                 alt=""
               ></img>
             </div>
-            <div class="uk-card-body">
+            <div className="uk-card-body">
               <a href="https://17keerti.github.io/Weather-Dashboard/">
-                <h3 class="uk-card-title">Weather Dashboard</h3>
+                <h3 className="uk-card-title">Weather Dashboard</h3>
               </a>
               <a href="https://github.com/17keerti/Weather-Dashboard">
                 <span uk-icon="github"></span>
@@ -84,12 +84,12 @@ function Portfolio() {
               </p>
             </div>
 
-            <div class="uk-card-media-top">
+            <div className="uk-card-media-top">
               <img src="password.png" width="250" height="250" alt=""></img>{" "}
             </div>
-            <div class="uk-card-body">
+            <div className="uk-card-body">
               <a href="https://17keerti.github.io/password-generator-29thmarch/">
-                <h3 class="uk-card-title">Password Generator</h3>
+                <h3 className="uk-card-title">Password Generator</h3>
               </a>
               <a href="https://github.com/17keerti/password-generator-29thmarch">
                 <span uk-icon="github"></span>

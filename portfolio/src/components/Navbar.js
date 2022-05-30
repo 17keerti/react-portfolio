@@ -32,9 +32,9 @@ function Navbar({ currentPage, handlePageChange }) {
               <span uk-icon="file-pdf"></span>Resume
             </a>
           </li>
-          <li>
-            <a href="#contactme">
-              <span uk-icon="user"></span>Contact me
+          <li className={currentPage === "Contact" ? "uk-active" : "nav-link"}>
+            <a href="#contact" onClick={() => handlePageChange("Contact")}>
+              <span uk-icon="user"></span>Contact
             </a>
           </li>
         </ul>
