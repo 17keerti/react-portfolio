@@ -3,6 +3,11 @@ import React from "react";
 function AboutMe() {
   return (
     <div>
+      <img
+        className="uk-thumbnail uk-border-circle"
+        src="01.png"
+        alt="myPicture"
+      ></img>
       <div className="uk-text uk-padding-small">
         <h2 id="aboutme">About me</h2>
       </div>
