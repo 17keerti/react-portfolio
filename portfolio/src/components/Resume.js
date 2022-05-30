@@ -1,8 +1,9 @@
 import React from "react";
+import Div100vh from "react-div-100vh";
 
 function Resume() {
   return (
-    <div>
+    <Div100vh>
       <div className="uk-text uk-padding-small">
         <h2 id="resume">Resume</h2>
         <a target="blank" href="Keerti_Resume.pdf">
@@ -29,7 +30,7 @@ function Resume() {
         <li>REST</li>
         <li>GraphQL</li>
       </ul>
-    </div>
+    </Div100vh>
   );
 }
 

@@ -1,8 +1,9 @@
 import React from "react";
+import Div100vh from "react-div-100vh";
 
 function AboutMe() {
   return (
-    <div>
+    <Div100vh>
       <img
         className="uk-thumbnail uk-border-circle"
         src="01.png"
@@ -17,7 +18,7 @@ function AboutMe() {
         to the work I do. I have worked on technologies like HTML5, CSS,
         JavaScript, jQuery.
       </div>
-    </div>
+    </Div100vh>
   );
 }
 

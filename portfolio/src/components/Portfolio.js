@@ -1,8 +1,9 @@
 import React from "react";
+import Div100vh from "react-div-100vh";
 
 function Portfolio() {
   return (
-    <div>
+    <Div100vh>
       <div className="uk-text uk-padding-small">
         <h2 id="portfolio">Projects</h2>
       </div>
@@ -125,7 +126,7 @@ function Portfolio() {
           </div>
         </div>
       </div>
-    </div>
+    </Div100vh>
   );
 }
 
