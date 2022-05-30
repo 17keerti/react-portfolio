@@ -20,8 +20,10 @@ function Navbar({ currentPage, handlePageChange }) {
               <span uk-icon="user"></span>About Me
             </a>
           </li>
-          <li>
-            <a href="#projects">
+          <li
+            className={currentPage === "Portfolio" ? "uk-active" : "nav-link"}
+          >
+            <a href="#portfolio" onClick={() => handlePageChange("Portfolio")}>
               <span uk-icon="folder"></span>Portfolio
             </a>
           </li>

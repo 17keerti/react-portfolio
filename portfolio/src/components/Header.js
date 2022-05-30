@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import AboutMe from "./AboutMe";
 import Resume from "./Resume";
+import Portfolio from "./Portfolio";
 
 function Header() {
   const [currentPage, setCurrentPage] = useState("AboutMe");
@@ -12,6 +13,9 @@ function Header() {
     }
     if (currentPage === "Resume") {
       return <Resume />;
+    }
+    if (currentPage === "Portfolio") {
+      return <Portfolio />;
     }
   };
 
