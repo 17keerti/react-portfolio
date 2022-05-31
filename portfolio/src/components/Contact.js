@@ -4,12 +4,12 @@ import Div100vh from "react-div-100vh";
 function Contact() {
   const [showMessage, setShowMessage] = useState("");
 
-  const handleMouseLeave = (e) => {
+  const handleCursorLeave = (e) => {
     e.target = setShowMessage(true);
   };
   return (
     <Div100vh>
-      <form className="uk-form-stacked uk-margin-left uk-center">
+      <form className="uk-form-stacked uk-margin-left uk-center" id="contact">
         <div className="uk-margin">
           <label className="uk-form-label" for="form-stacked-text">
             Name:
@@ -17,7 +17,7 @@ function Contact() {
           <div className="uk-form-controls">
             <input
               className="uk-input uk-form-width-medium"
-              onMouseOut={handleMouseLeave}
+              // onMouseOut={handleCursorLeave}    change to cursor event
               id="form-stacked-text"
               type="text"
               placeholder="Name"
@@ -33,7 +33,7 @@ function Contact() {
           <div className="uk-form-controls">
             <input
               className="uk-input uk-form-width-medium"
-              onMouseOut={handleMouseLeave}
+              // onMouseOut={handleCursorLeave}      change to cursor event
               id="form-stacked-text"
               type="email"
               placeholder="email"
@@ -48,7 +48,7 @@ function Contact() {
           </label>
           <input
             className="uk-input uk-form-width-medium uk-form-large"
-            onMouseOut={handleMouseLeave}
+            // onMouseOut={handleCursorLeave}         change to cursor event
             type="text"
             placeholder="Enter message"
           ></input>
