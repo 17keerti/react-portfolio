@@ -2,6 +2,26 @@ import React from "react";
 import Div100vh from "react-div-100vh";
 
 function Resume() {
+  var frontEndProficiencies = [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "JQuery",
+    "Responsive Design",
+    "Bootstrap",
+    "React",
+  ];
+
+  const backEndProficiencies = [
+    "APIs",
+    "Node",
+    "Express",
+    "MySQL, Sequelize",
+    "MongoDB, Mongoose",
+    "REST",
+    "GraphQL",
+  ];
+
   return (
     <Div100vh>
       <div className="uk-text uk-padding-small">
@@ -12,23 +32,16 @@ function Resume() {
       </div>
       <div className="uk-margin-left">Front-end Proficiencies</div>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>JQuery</li>
-        <li>Responsive Design</li>
-        <li>Bootstrap</li>
-        <li>React</li>
+        {frontEndProficiencies.map((frontEnds) => (
+          <li>{frontEnds}</li>
+        ))}
       </ul>
+
       <div className="uk-margin-left">Back-end Proficiencies</div>
       <ul>
-        <li>APIs</li>
-        <li>Node</li>
-        <li>Express</li>
-        <li>MySQL, Sequelize</li>
-        <li>MongoDB, Mongoose</li>
-        <li>REST</li>
-        <li>GraphQL</li>
+        {backEndProficiencies.map((backends) => (
+          <li>{backends}</li>
+        ))}
       </ul>
     </Div100vh>
   );
