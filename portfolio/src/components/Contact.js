@@ -2,10 +2,22 @@ import React, { useState } from "react";
 import Div100vh from "react-div-100vh";
 
 function Contact() {
-  const [showMessage, setShowMessage] = useState("");
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleCursorLeave = (e) => {
-    e.target = setShowMessage(true);
+  const [showMessage, setShowMessage] = useState("");
+  const { name, email, message } = formState;
+
+  const handleInputChange = (e) => {
+    if (!e.target.value.length) {
+      setShowMessage(`You must enter a valid ${e.target.name}`);
+    } else {
+      setShowMessage("");
+    }
+    setFormState({ ...formState, [e.target.name]: e.target.value });
   };
   return (
     <Div100vh>
@@ -17,12 +29,13 @@ function Contact() {
           <div className="uk-form-controls">
             <input
               className="uk-input uk-form-width-medium"
-              // onMouseOut={handleCursorLeave}    change to cursor event
+              name="name"
+              value={name}
+              onBlur={handleInputChange}
               id="form-stacked-text"
               type="text"
               placeholder="Name"
             ></input>
-            {showMessage && <p className="message">Please enter name</p>}
           </div>
         </div>
 
@@ -33,12 +46,13 @@ function Contact() {
           <div className="uk-form-controls">
             <input
               className="uk-input uk-form-width-medium"
-              // onMouseOut={handleCursorLeave}      change to cursor event
+              name="email"
+              value={email}
+              onBlur={handleInputChange}
               id="form-stacked-text"
               type="email"
               placeholder="email"
             ></input>
-            {showMessage && <p className="message">Please enter email</p>}
           </div>
         </div>
 
@@ -48,11 +62,13 @@ function Contact() {
           </label>
           <input
             className="uk-input uk-form-width-medium uk-form-large"
-            // onMouseOut={handleCursorLeave}         change to cursor event
+            name="message"
+            value={message}
+            onBlur={handleInputChange}
             type="text"
             placeholder="Enter message"
           ></input>
-          {showMessage && <p className="message">Please enter message</p>}
+          {showMessage && <p className="message">{showMessage}</p>}
         </div>
         <button className="uk-button uk-button-default">Submit</button>
       </form>

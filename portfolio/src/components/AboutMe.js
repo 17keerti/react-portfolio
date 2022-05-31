@@ -6,7 +6,7 @@ function AboutMe() {
     <Div100vh>
       <img
         className="uk-thumbnail uk-border-circle"
-        src="01.png"
+        src="mypicture.png"
         alt="myPicture"
       ></img>
       <div className="uk-text uk-padding-small">
