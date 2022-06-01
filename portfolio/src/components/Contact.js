@@ -3,9 +3,9 @@ import Div100vh from "react-div-100vh";
 
 function Contact() {
   const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: " ",
+    email: " ",
+    message: " ",
   });
 
   const [showMessage, setShowMessage] = useState("");
@@ -17,7 +17,9 @@ function Contact() {
     } else {
       setShowMessage("");
     }
-    setFormState({ ...formState, [e.target.name]: e.target.value });
+    if (!showMessage) {
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+    }
   };
   return (
     <Div100vh>
@@ -30,7 +32,7 @@ function Contact() {
             <input
               className="uk-input uk-form-width-medium"
               name="name"
-              value={name}
+              defaultValue={name}
               onBlur={handleInputChange}
               id="form-stacked-text"
               type="text"
@@ -47,7 +49,7 @@ function Contact() {
             <input
               className="uk-input uk-form-width-medium"
               name="email"
-              value={email}
+              defaultValue={email}
               onBlur={handleInputChange}
               id="form-stacked-text"
               type="email"
@@ -63,7 +65,7 @@ function Contact() {
           <input
             className="uk-input uk-form-width-medium uk-form-large"
             name="message"
-            value={message}
+            defaultValue={message}
             onBlur={handleInputChange}
             type="text"
             placeholder="Enter message"
