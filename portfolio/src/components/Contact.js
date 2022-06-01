@@ -8,19 +8,24 @@ function Contact() {
     message: " ",
   });
 
-  const [showMessage, setShowMessage] = useState("");
+  const [showMessage, setShowMessage] = useState(" ");
   const { name, email, message } = formState;
 
   const handleInputChange = (e) => {
     if (!e.target.value.length) {
       setShowMessage(`You must enter a valid ${e.target.name}`);
     } else {
-      setShowMessage("");
+      setShowMessage(" ");
     }
     if (!showMessage) {
       setFormState({ ...formState, [e.target.name]: e.target.value });
     }
   };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <Div100vh>
       <form className="uk-form-stacked uk-margin-left uk-center" id="contact">
@@ -72,7 +77,13 @@ function Contact() {
           ></input>
           {showMessage && <p className="message">{showMessage}</p>}
         </div>
-        <button className="uk-button uk-button-default">Submit</button>
+        <button
+          className="uk-button uk-button-default"
+          type="submit"
+          onSubmit={handleSubmit}
+        >
+          Submit
+        </button>
       </form>
     </Div100vh>
   );
