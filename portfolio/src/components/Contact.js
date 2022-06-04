@@ -2,29 +2,15 @@ import React, { useState } from "react";
 import Div100vh from "react-div-100vh";
 
 function Contact() {
-  const [formState, setFormState] = useState({
-    name: " ",
-    email: " ",
-    message: " ",
-  });
-
   const [showMessage, setShowMessage] = useState(" ");
-  const { name, email, message } = formState;
 
   const handleInputChange = (e) => {
-    if (!e.target.value.length) {
+    if (e.target.value === "") {
       setShowMessage(`You must enter a valid ${e.target.name}`);
     } else {
       setShowMessage(" ");
     }
-    if (!showMessage) {
-      setFormState({ ...formState, [e.target.name]: e.target.value });
-    }
   };
-
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
 
   return (
     <Div100vh>
@@ -37,7 +23,6 @@ function Contact() {
             <input
               className="uk-input uk-form-width-medium"
               name="name"
-              defaultValue={name}
               onBlur={handleInputChange}
               id="form-stacked-text"
               type="text"
@@ -54,7 +39,6 @@ function Contact() {
             <input
               className="uk-input uk-form-width-medium"
               name="email"
-              defaultValue={email}
               onBlur={handleInputChange}
               id="form-stacked-text"
               type="email"
@@ -70,18 +54,13 @@ function Contact() {
           <input
             className="uk-input uk-form-width-medium uk-form-large"
             name="message"
-            defaultValue={message}
             onBlur={handleInputChange}
             type="text"
             placeholder="Enter message"
           ></input>
           {showMessage && <p className="message">{showMessage}</p>}
         </div>
-        <button
-          className="uk-button uk-button-default"
-          type="submit"
-          onSubmit={handleSubmit}
-        >
+        <button className="uk-button uk-button-default" type="submit">
           Submit
         </button>
       </form>
